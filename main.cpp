@@ -36,5 +36,13 @@ int main() {
                           {"Test 6:", "T", "T", "F", "T", "F"} };
   int cases = 6;
 
+  int* scores = new int[cases];
+  scores = calcGrades(grades, cases);
+  cout << *scores << endl;
+  cout << *(scores + 1) << endl;
+  cout << *(scores + 2) << endl;
+  cout << *(scores + 3) << endl;
+  cout << *(scores + 4) << endl;
+  cout << *(scores + 5) << endl;
 
 }
