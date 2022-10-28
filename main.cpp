@@ -28,5 +28,13 @@ return scores;
 }
   
 int main() {
+  string grades[6][6] = { {"Test 1:", "T", "F", "T", "T", "T"},
+                          {"Test 2:", "T", "T", "T", "T", "T"},
+                          {"Test 3:", "T", "T", "F", "F", "T"},
+                          {"Test 4:", "F", "T", "F", "F", "F"},
+                          {"Test 5:", "F", "F", "F", "F", "F"},
+                          {"Test 6:", "T", "T", "F", "T", "F"} };
+  int cases = 6;
+
 
 }
