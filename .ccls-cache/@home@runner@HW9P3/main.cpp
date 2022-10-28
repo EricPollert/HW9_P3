@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int* calcGrades(string grades[][], int cases){
-int scores[cases];
+int* calcGrades(string grades[][6], int cases){
+int* scores = new int[cases];
 for (int row = 0; row < cases; row++){
 int score = 0;
 if(grades[row][1] == "T"){
@@ -23,6 +23,8 @@ if(grades[row][4] == "F"){
 if(grades[row][5] == "T"){
   score += 5;
 }
+*(scores + row) = score;
+  
 }
 return scores;
 }
@@ -36,13 +38,14 @@ int main() {
                           {"Test 6:", "T", "T", "F", "T", "F"} };
   int cases = 6;
 
-  int* scores = new int[cases];
-  scores = calcGrades(grades, cases);
-  cout << *scores << endl;
-  cout << *(scores + 1) << endl;
-  cout << *(scores + 2) << endl;
-  cout << *(scores + 3) << endl;
-  cout << *(scores + 4) << endl;
-  cout << *(scores + 5) << endl;
 
+  
+int* scores = new int[cases];
+scores = calcGrades(grades, cases);
+cout << *scores << endl;
+cout << *(scores + 1) << endl;
+cout << *(scores + 2) << endl;
+cout << *(scores + 3) << endl;
+cout << *(scores + 4) << endl;
+cout << *(scores + 5) << endl;
 }
